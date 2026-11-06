@@ -65,6 +65,16 @@ window.DATA = {
     { "bank": "BCA",  "nomor": "1234567890",   "atasNama": "Dimas Arya Nugraha" },
     { "bank": "DANA", "nomor": "09098787889", "atasNama": "Salsabila Anindita" }
   ],
+  "pihakKlien": "pria",
+  "panelAdmin": {
+    "ucapanPublik": true,
+    "turutMengundang": true,
+    "rekening": true,
+    "urutanNama": true,
+    "pesanWa": true,
+    "pratinjauLink": true
+  },
+  "logoBank": true,
   "alamatKado": "Kp. Sindang Baru Desa Ciasmara",
   "turutMengundangTampil": false,
   "turutMengundang": [

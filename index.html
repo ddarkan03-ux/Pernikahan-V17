@@ -199,6 +199,39 @@ button{font-family:inherit;cursor:pointer}
 .bank .no{font-family:var(--mono);font-size:21px;letter-spacing:.14em;margin:12px 0 0;word-break:break-all}
 .bank .an{font-size:12.5px;color:var(--mut);margin-bottom:14px}
 .bank .ad{font-size:13.5px;margin:8px 0 14px}
+/* tema kartu rekening per bank (adaptif v2) */
+/* hanya warna, motif & logo: ukuran, jarak, huruf, sudut & garis tepi mengikuti template yang sudah ada */
+.bank[data-bk]{color:var(--bt);border-color:var(--ba);outline-color:var(--ba);overflow:hidden;background:var(--pt),linear-gradient(140deg,var(--b1),var(--b2))}
+.bank[data-bk]::before{content:"";position:absolute;right:-50px;top:-60px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.28),rgba(255,255,255,0) 70%);pointer-events:none}
+.bank[data-bk]>*{position:relative;z-index:1}
+.bank[data-bk] .bn{color:var(--bt)}
+.bank[data-bk] .bn.lgp{display:flex;align-items:center;justify-content:center;box-sizing:border-box;background:#fff;padding:0 .7em;border-radius:.3em;height:1.85em;height:1lh}
+.bank .lg{display:block;height:72%;width:auto;max-width:72%}
+.bank[data-bk] .no{color:var(--bt)}
+.bank[data-bk] .an{color:var(--bt);opacity:.88}
+.bank[data-bk] .btn.o{color:var(--bt);border-color:var(--ba);background:rgba(255,255,255,.14)}
+.bank[data-bk=bca]{--b1:#0060AF;--b2:#00437d;--bt:#fff;--ba:#8cc0f2;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2224%22%3E%3Cpath%20d=%22M0%2012%20Q15%200%2030%2012%20T60%2012%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=bri]{--b1:#0857C3;--b2:#053b88;--bt:#fff;--ba:#f7941d;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2228%22%20height=%2228%22%3E%3Cpath%20d=%22M14%201%2027%2014%2014%2027%201%2014Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=bni]{--b1:#005E6A;--b2:#003f48;--bt:#fff;--ba:#f26f21;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%3E%3Cpath%20d=%22M-2%2024%2024-2M-2%2013%2013-2M9%2024%2024%209%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=mandiri]{--b1:#003A70;--b2:#00264d;--bt:#fff;--ba:#fcb017;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2236%22%20height=%2218%22%3E%3Cpath%20d=%22M0%204%2018%2016%2036%204%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=bsi]{--b1:#00A39D;--b2:#006f6b;--bt:#fff;--ba:#f8ad3c;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Cpath%20d=%22M20%203%2025%2015%2037%2020%2025%2025%2020%2037%2015%2025%203%2020%2015%2015Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=cimb]{--b1:#790008;--b2:#4d0005;--bt:#fff;--ba:#ed3024;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2234%22%20height=%2230%22%3E%3Cpath%20d=%22M9%201h16l8%2014-8%2014H9L1%2015Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=permata]{--b1:#0064FF;--b2:#003fa8;--bt:#fff;--ba:#9cc2ff;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%2216%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%228%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=btn]{--b1:#015BFD;--b2:#0140b0;--bt:#fff;--ba:#ff8a8a;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%3E%3Cpath%20d=%22M-2%2024%2024-2M-2%2013%2013-2M9%2024%2024%209%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=danamon]{--b1:#046148;--b2:#033f2f;--bt:#fff;--ba:#ef9826;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2228%22%20height=%2228%22%3E%3Cpath%20d=%22M14%201%2027%2014%2014%2027%201%2014Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=jago]{--b1:#FDAF27;--b2:#e89610;--bt:#2b2b2b;--ba:#2b2b2b;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2218%22%20height=%2218%22%3E%3Ccircle%20cx=%229%22%20cy=%229%22%20r=%222%22%20fill=%22%232b2b2b%22%20fill-opacity=%220.18000000000000002%22/%3E%3C/svg%3E")}
+.bank[data-bk=seabank]{--b1:#EA5F00;--b2:#c24a00;--bt:#fff;--ba:#ffd3ba;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2224%22%3E%3Cpath%20d=%22M0%2012%20Q15%200%2030%2012%20T60%2012%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=dana]{--b1:#008CEB;--b2:#0067b0;--bt:#fff;--ba:#c3e4ff;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%2216%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%228%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=ovo]{--b1:#5827D4;--b2:#3d1a96;--bt:#fff;--ba:#cdb8f2;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2218%22%20height=%2218%22%3E%3Ccircle%20cx=%229%22%20cy=%229%22%20r=%222%22%20fill=%22%23fff%22%20fill-opacity=%220.18000000000000002%22/%3E%3C/svg%3E")}
+.bank[data-bk=gopay]{--b1:#00AED6;--b2:#007aa6;--bt:#fff;--ba:#a5ebf8;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%2216%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%228%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=shopeepay]{--b1:#E8451E;--b2:#bf3112;--bt:#fff;--ba:#ffc6b8;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%3E%3Cpath%20d=%22M-2%2024%2024-2M-2%2013%2013-2M9%2024%2024%209%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=linkaja]{--b1:#E82529;--b2:#b0151a;--bt:#fff;--ba:#ffb8ba;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2236%22%20height=%2218%22%3E%3Cpath%20d=%22M0%204%2018%2016%2036%204%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=jenius]{--b1:#00A4DE;--b2:#0078a8;--bt:#fff;--ba:#b3efff;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2224%22%3E%3Cpath%20d=%22M0%2012%20Q15%200%2030%2012%20T60%2012%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=maybank]{--b1:#FFC600;--b2:#e5a900;--bt:#231F20;--ba:#231F20;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%3E%3Cpath%20d=%22M-2%2024%2024-2M-2%2013%2013-2M9%2024%2024%209%22%20fill=%22none%22%20stroke=%22%23231F20%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=ocbc]{--b1:#D10A10;--b2:#9c070c;--bt:#fff;--ba:#ffb3b8;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2228%22%20height=%2228%22%3E%3Cpath%20d=%22M14%201%2027%2014%2014%2027%201%2014Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=bjb]{--b1:#1B517E;--b2:#103554;--bt:#fff;--ba:#f2c94c;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2224%22%3E%3Cpath%20d=%22M0%2012%20Q15%200%2030%2012%20T60%2012%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=neo]{--b1:#FFBE00;--b2:#e0a000;--bt:#1a1a1a;--ba:#1a1a1a;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2218%22%20height=%2218%22%3E%3Ccircle%20cx=%229%22%20cy=%229%22%20r=%222%22%20fill=%22%231a1a1a%22%20fill-opacity=%220.18000000000000002%22/%3E%3C/svg%3E")}
+.bank[data-bk=muamalat]{--b1:#420655;--b2:#2b0437;--bt:#fff;--ba:#6fbd62;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Cpath%20d=%22M20%203%2025%2015%2037%2020%2025%2025%2020%2037%2015%2025%203%2020%2015%2015Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
 
 /* ---------- komentar ---------- */
 .fm{max-width:360px;margin:0 auto;text-align:left;background:rgba(243,235,221,.05);border:1px solid var(--line);border-radius:20px;padding:22px 20px 24px}
@@ -290,6 +323,7 @@ var OFS={WIB:'+07:00',WITA:'+08:00',WIT:'+09:00'};
 var ZONA=OFS[D.zona]?D.zona:'WIB';
 var $=function(s,r){return (r||document).querySelector(s)};
 var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function bk(n){var x=String(n||'').toLowerCase().replace(/[^a-z0-9]/g,'').replace(/^bank/,''),M=[['bca',/^(bca|centralasia)/],['bri',/^(bri|rakyatindonesia)/],['bni',/^(bni|negaraindonesia)/],['mandiri',/^mandiri/],['bsi',/^(bsi|syariahindonesia)/],['cimb',/^cimb/],['permata',/^permata/],['btn',/^(btn|tabungannegara)/],['danamon',/^danamon/],['jago',/^jago/],['seabank',/^seabank/],['dana',/^dana$/],['ovo',/^ovo$/],['gopay',/^gopay/],['shopeepay',/^(shopeepay|spay)/],['linkaja',/^linkaja/],['jenius',/^(jenius|btpn)/],['maybank',/^maybank/],['ocbc',/^ocbc/],['bjb',/^bjb/],['neo',/^neo/],['muamalat',/^muamalat/]];for(var i=0;i<M.length;i++)if(M[i][1].test(x))return M[i][0];return''}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function tgl(s){var p=String(s||'').split('-');if(p.length<3)return '';var d=new Date(+p[0],+p[1]-1,+p[2]);return HARI[d.getDay()]+', '+(+p[2])+' '+BLN[+p[1]-1]+' '+p[0]}
 function jam(s){return String(s||'').replace(':','.')}
@@ -324,7 +358,11 @@ function svg(n,cls){return '<svg viewBox="0 0 24 24"'+(cls?' class="'+cls+'"':''
 /* ---------- data turunan ---------- */
 var pr=D.pria||{},wn=D.wanita||{},F=D.foto||{},ak=D.akad||null,rs=D.resepsi||null;
 var PANG=(pr.panggilan||'Mempelai Pria'),WANG=(wn.panggilan||'Mempelai Wanita');
-var NAMA=PANG+' & '+WANG;
+var URUT_URL=(new URLSearchParams(location.search).get('urut')||'').toLowerCase();
+var WF=(URUT_URL==='wanita'||URUT_URL==='pria')?URUT_URL==='wanita':(D.pihakKlien||D.urutanNama)==='wanita';
+var N1,N2,I1,I2,NAMA;
+function ord(){N1=WF?WANG:PANG;N2=WF?PANG:WANG;I1=(N1.charAt(0)+'').toUpperCase();I2=(N2.charAt(0)+'').toUpperCase();NAMA=N1+' & '+N2}
+ord();
 var tamu=(function(){var v=(new URLSearchParams(location.search).get('to')||'').trim().slice(0,40);return v.toLowerCase()==='tamu undangan'?'':v})();
 var S={ucapanPublik:D.ucapanPublik!==false,turut:!!D.turutMengundangTampil,rek:[true,true]};
 var utama=ak||rs;
@@ -339,7 +377,7 @@ function tiket(judul,e,idx,kr,scene){
   var gcal='';
   try{var st=wkt(e.tanggal,e.jamMulai),en=e.jamSelesai?wkt(e.tanggal,e.jamSelesai):new Date(st.getTime()+2*3600*1000);
     var f=function(d){return d.toISOString().replace(/[-:]|\.\d{3}/g,'')};
-    gcal='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(judul+' '+NAMA)+'&dates='+f(st)+'/'+f(en)+'&details='+encodeURIComponent('Pernikahan '+(pr.nama||PANG)+' & '+(wn.nama||WANG))+'&location='+encodeURIComponent(e.tempat+', '+e.alamat);}catch(x){}
+    gcal='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(judul+' '+NAMA)+'&dates='+f(st)+'/'+f(en)+'&details='+encodeURIComponent('Pernikahan '+(WF?(wn.nama||WANG)+' & '+(pr.nama||PANG):(pr.nama||PANG)+' & '+(wn.nama||WANG)))+'&location='+encodeURIComponent(e.tempat+', '+e.alamat);}catch(x){}
   return '<div class="tk rv d'+idx+'"><div class="th"><span class="mono">'+esc(scene)+'</span><span class="j">'+esc(judul)+'</span><i>'+esc(kr)+'</i></div>'+
    '<div class="tb"><div class="tgl">'+esc(tgl(e.tanggal))+'</div><div class="jm">'+esc(rentang(e))+'</div></div>'+
    '<div class="dv"></div>'+
@@ -362,7 +400,7 @@ function cover(){
    '<div class="ci">'+
    '<div class="vk">우리 결혼합니다</div>'+
    '<div class="mono" style="margin-bottom:14px">A Wedding Film</div>'+
-   '<div class="ttl">'+esc(PANG)+'<em>&amp;</em>'+esc(WANG)+'</div>'+
+   '<div class="ttl">'+esc(N1)+'<em>&amp;</em>'+esc(N2)+'</div>'+
    '<div class="spec"><span>'+(utama?esc(tahun(utama.tanggal)):'2027')+'</span><span>16+</span><span>1 SEASON</span><span>HD</span></div>'+
    '<div class="pass"><span class="mono">Special Screening &middot; Admit One</span><b>'+esc(tamu||'Tamu Undangan')+'</b><i>Kepada Yth. Bapak/Ibu/Saudara/i. Mohon maaf apabila terdapat kesalahan penulisan nama dan gelar.</i></div>'+
    '<button class="btn" id="buka">'+svg('play','fl')+'Play</button></div>'+
@@ -378,7 +416,7 @@ function build(){
   h+='<section class="sec hero fotobg" id="beranda"'+(F.latarUtama?' style="background-image:url('+esc(F.latarUtama)+')"':'')+'>'+
     '<div class="bar t"><span class="rec">REC</span><span>'+esc(tg)+'</span></div>'+
     '<div class="mono rv">Episode 01 &mdash; The Wedding Day</div>'+
-    '<div class="ttl rv d1">'+esc(PANG)+'<em>&amp;</em>'+esc(WANG)+'</div>'+
+    '<div class="ttl rv d1">'+esc(N1)+'<em>&amp;</em>'+esc(N2)+'</div>'+
     '<div class="meta rv d1"><b>98% Match</b><span>'+(utama?esc(tahun(utama.tanggal)):'')+'</span><span class="b">16+</span><span>Romance &bull; Slow Burn &bull; Happy Ending</span></div>'+
     '<div class="cap rv d2">Dan akhirnya, hari itu tiba.</div>'+
     '<div class="nxt rv d2">tayang perdana dalam...</div><div class="cd rv d3" id="cd"></div>'+
@@ -394,14 +432,14 @@ function build(){
   h+='<section class="sec" id="mempelai">'+glow('60%','0%',240,LV)+glow('-30%','55%',260,RS)+
     head('Scene 01 &mdash; Cast','Pemeran Utama','출연진')+
     '<p class="sub rv">Bismillahirrahmanirrahim. Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.</p>'+
-    pemeran(pr,F.pria,'p',1)+'<div class="plus rv">&amp;</div>'+pemeran(wn,F.wanita,'w',2)+'</section>';
+    (WF?pemeran(wn,F.wanita,'w',1):pemeran(pr,F.pria,'p',1))+'<div class="plus rv">&amp;</div>'+(WF?pemeran(pr,F.pria,'p',2):pemeran(wn,F.wanita,'w',2))+'</section>';
 
   /* alur cerita: chat */
   if(D.cerita&&D.cerita.length){
     var jm=['오전 9:41','오후 12:07','오후 3:30','오후 8:15','오전 7:02','오후 10:48'];
     h+='<section class="sec" id="cerita">'+glow('-20%','20%',240,GD)+
       head('Scene 02 &mdash; Plot','Alur Cerita','줄거리')+
-      '<div class="chat rv"><div class="top"><b>'+esc(PANG)+' &amp; '+esc(WANG)+'</b><span>'+D.cerita.length+' PESAN</span></div>'+
+      '<div class="chat rv"><div class="top"><b>'+esc(N1)+' &amp; '+esc(N2)+'</b><span>'+D.cerita.length+' PESAN</span></div>'+
       D.cerita.map(function(c,i){
         var me=i%2===1,t=jm[i%jm.length];
         return '<div class="dtc"><span>'+esc(c.waktu)+'</span></div>'+
@@ -432,7 +470,7 @@ function build(){
     h+='<section class="sec" id="hadiah">'+glow('-25%','5%',240,RS)+glow('65%','65%',220,GD)+
       head('Scene 05 &mdash; Gift','Tanda Kasih','선물')+
       '<p class="sub rv">Doa restu Anda adalah hadiah terindah. Namun bila ingin memberi tanda kasih, dapat melalui:</p><div id="bank">'+
-      hd.map(function(b,i){return '<div class="bank rv" data-r="'+i+'"><div class="bn">'+esc(b.bank)+'</div><div class="no">'+esc(b.nomor)+'</div><div class="an">a.n. '+esc(b.atasNama)+'</div><button class="btn s o" data-cp="'+esc(b.nomor)+'">'+svg('copy')+'Salin nomor</button></div>'}).join('')+'</div>'+
+      hd.map(function(b,i){var k=bk(b.bank),kl=D.logoBank===false?'':k;return '<div class="bank rv" data-r="'+i+'"'+(k?' data-bk="'+k+'"':'')+'><div class="bn'+(kl?' lgp':'')+'">'+(kl?'<img class="lg" src="foto/bank/'+kl+'.svg" alt="'+esc(b.bank)+'" onerror="var p=this.parentNode;p.classList.remove(\'lgp\');p.textContent=this.alt">':esc(b.bank))+'</div><div class="no">'+esc(b.nomor)+'</div><div class="an">a.n. '+esc(b.atasNama)+'</div><button class="btn s o" data-cp="'+esc(b.nomor)+'">'+svg('copy')+'Salin nomor</button></div>'}).join('')+'</div>'+
       (D.alamatKado?'<div class="bank rv"><div class="bn">Kirim Kado</div><div class="ad">'+esc(D.alamatKado)+'</div><button class="btn s o" data-cp="'+esc(D.alamatKado)+'">'+svg('copy')+'Salin alamat</button></div>':'')+'</section>';
   }
 
@@ -456,7 +494,7 @@ function build(){
     '<div class="bar t"><span>End of Episode 01</span><span>'+esc(tg)+'</span></div>'+
     '<div class="fin rv">Fin.</div><div class="kk rv">끝</div>'+
     '<p class="t rv d1">Terima kasih atas kehadiran, doa, dan restu Bapak/Ibu/Saudara/i sekalian. Semoga Allah SWT membalas kebaikan Anda dan menjadikan kami keluarga yang sakinah, mawaddah, warahmah.</p>'+
-    '<div class="cred rv d2"><div><span>Starring</span><i></i><b>'+esc(PANG)+' &amp; '+esc(WANG)+'</b></div><div><span>Directed by</span><i></i><b>Takdir Allah</b></div><div><span>Special thanks</span><i></i><b>Keluarga &amp; Sahabat</b></div></div>'+
+    '<div class="cred rv d2"><div><span>Starring</span><i></i><b>'+esc(N1)+' &amp; '+esc(N2)+'</b></div><div><span>Directed by</span><i></i><b>Takdir Allah</b></div><div><span>Special thanks</span><i></i><b>Keluarga &amp; Sahabat</b></div></div>'+
     '<div class="nm rv d2">'+esc(NAMA)+'</div><div class="w rv d3">Wassalamu\'alaikum Wr. Wb.</div>'+
     (D.catatan?'<div class="ct rv"><span class="cap">'+esc(D.catatan)+'</span></div>':'')+
     '<div class="ft">Undangan Digital</div>'+
@@ -556,6 +594,7 @@ function muatPengaturan(){
     if(typeof p.turutTampil==='boolean')S.turut=p.turutTampil;
     if(typeof p.rekening1==='boolean')S.rek[0]=p.rekening1;
     if(typeof p.rekening2==='boolean')S.rek[1]=p.rekening2;
+if(!URUT_URL&&(p.urutNama==='pria'||p.urutNama==='wanita')&&((p.urutNama==='wanita')!==WF)){try{var uu=new URL(location.href);uu.searchParams.set('urut',p.urutNama);location.replace(uu.toString())}catch(x){}}
   }).catch(function(){});
 }
 
